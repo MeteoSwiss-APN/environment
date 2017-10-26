@@ -9,9 +9,10 @@ fi
 module load craype-accel-nvidia60
 module load CMake
 
+# Boost
+export BOOST_ROOT=/project/c14/install/daint/boost/boost_1_64_0/
+export LD_LIBRARY_PATH=${BOOST_ROOT}/lib:${LD_LIBRARY_PATH}
+
 export CXX=`which g++`
 export CC=`which gcc`
 export FC=ftn
-export BOOST_ROOT=/users/vogtha/boost/boost_1_62_0_gcc5.3.0
-
-export LD_LIBRARY_PATH=${BOOST_ROOT}/lib:${LD_LIBRARY_PATH}

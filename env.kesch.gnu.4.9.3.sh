@@ -10,11 +10,13 @@ module load CMake/3.8.1
 module load netCDF-Fortran
 module load HDF5
 
-
 export LD_LIBRARY_PATH=${CRAY_LD_LIBRARY_PATH}:${LD_LIBRARY_PATH}
-export BOOST_ROOT=/project/c14/install/kesch/boost_1.65.1/
+
+# Boost
+export BOOST_ROOT=/project/c14/install/kesch/boost/boost_1_64_0/
 export LD_LIBRARY_PATH=${BOOST_ROOT}/lib:${LD_LIBRARY_PATH}
 
+# Override C++ and C compiler
 export CC=`which gcc`
 export CXX=`which g++`
 export FC=`which gfortran`
