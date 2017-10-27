@@ -12,18 +12,17 @@ module load cray-netcdf/4.3.2
 module load cray-hdf5/1.8.13
 module load GCC/4.9.3-binutils-2.25
 
-export LINKER_X86_64=$(which ld)
-
 export LD_LIBRARY_PATH=${CRAY_LD_LIBRARY_PATH}:${LD_LIBRARY_PATH}
 
 # Boost
 export BOOST_ROOT=/project/c14/install/kesch/boost/boost_1_64_0/
 export LD_LIBRARY_PATH=${BOOST_ROOT}/lib:${LD_LIBRARY_PATH}
 
-# Add an explicit linker line for GCC 4.9.3 library to provide C++11 support
+# Add an explicit linker line for GCC to provide C++11 support
 export LDFLAGS="-L$EBROOTGCC/lib64 ${LDFLAGS}"
 
 # Override C++ and C compiler
 export CXX=`which g++`
 export CC=`which gcc`
 export FC=`which ftn`
+export LINKER_X86_64=$(which ld)

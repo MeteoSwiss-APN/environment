@@ -16,10 +16,6 @@ module use /apps/common/UES/RHAT6/easybuild/modules/all
 module use /apps/escha/UES/RH6.7/sandbox-scorep/modules/all
 module load Score-P/3.1-gmvapich2-15.11_cuda_7.0_gdr
 
-export LINKER_X86_64=$(which ld)
-
-# Add an explicit linker line for GCC 4.9.3 library to provide C++11 support
-export LDFLAGS="-L$EBROOTGCC/lib64 ${LDFLAGS}"
 
 export LD_LIBRARY_PATH=${CRAY_LD_LIBRARY_PATH}:${LD_LIBRARY_PATH}
 
@@ -27,7 +23,11 @@ export LD_LIBRARY_PATH=${CRAY_LD_LIBRARY_PATH}:${LD_LIBRARY_PATH}
 export BOOST_ROOT=/project/c14/install/kesch/boost/boost_1_64_0/
 export LD_LIBRARY_PATH=${BOOST_ROOT}/lib:${LD_LIBRARY_PATH}
 
-# We have gcc for gnu, cray and pgi environments
+# Add an explicit linker line for GCC to provide C++11 support
+export LDFLAGS="-L$EBROOTGCC/lib64 ${LDFLAGS}"
+
+# Override C++ and C compiler
 export CXX=`which g++`
 export CC=`which gcc`
 export FC=`which ftn`
+export LINKER_X86_64=$(which ld)
