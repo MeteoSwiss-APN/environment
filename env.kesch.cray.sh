@@ -1,1 +1,1 @@
-env.kesch.cray.8.4.4.sh
+env.kesch.cray.8.6.0.sh
