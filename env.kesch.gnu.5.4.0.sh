@@ -17,7 +17,7 @@ module load hdf5/1.8.18-gmvolf-17.02
 export LD_LIBRARY_PATH=${CRAY_LD_LIBRARY_PATH}:${LD_LIBRARY_PATH}
 
 # Boost
-export BOOST_ROOT=/project/c14/install/kesch-test/boost/boost_1_64_0/
+export BOOST_ROOT=/project/c14/install/kesch/boost/boost_1_64_0/
 export LD_LIBRARY_PATH=${BOOST_ROOT}/lib:${LD_LIBRARY_PATH}
 
 # Add an explicit linker line for GCC to provide C++11 support
@@ -28,4 +28,3 @@ export CXX=`which g++`
 export CC=`which gcc`
 export FC=`which gfortran`
 export LINKER_X86_64=$(which ld)
-export HOST_COMPILER=`which g++`
