@@ -13,7 +13,6 @@ module load CMake
 export BOOST_ROOT=/scratch/snx3000/jenkins/install/boost/boost_1_64_0
 export LD_LIBRARY_PATH=${BOOST_ROOT}/lib:${LD_LIBRARY_PATH}
 
-# Override C++ and C compiler
-export CXX=`which g++`
-export CC=`which gcc`
 export FC=ftn
+# We cannot simply use g++ as cuda host compiler, because we require MPI support
+export CUDAHOSTCXX=CC
