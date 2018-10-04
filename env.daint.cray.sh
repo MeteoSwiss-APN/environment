@@ -16,7 +16,7 @@ module load gcc/5.3.0
 module load cray-netcdf
 
 # Boost
-export BOOST_ROOT=/scratch/snx3000/jenkins/install/boost/boost_1_64_0
+export BOOST_ROOT=$SCRATCH/../jenkins/install/boost/boost_1_67_0
 export LD_LIBRARY_PATH=${BOOST_ROOT}/lib:${LD_LIBRARY_PATH}
 
 # Add an explicit linker line for GCC to provide C++11 support
