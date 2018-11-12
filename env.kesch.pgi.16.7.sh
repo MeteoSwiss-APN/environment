@@ -3,7 +3,7 @@ module purge
 module load craype-haswell
 module load GCC/4.9.3-binutils-2.25
 module load PrgEnv-pgi/16.7
-module load /users/jenkins/easybuild/kesch/modules/all/cmake/3.12.0
+module load /users/mlukas/easybuild/kesch/modules/all/cmake/3.12.4
 
 # Add an explicit linker line for GCC 4.9.3 library to provide C++11 support
 export LDFLAGS="-L$EBROOTGCC/lib64 ${LDFLAGS}"
