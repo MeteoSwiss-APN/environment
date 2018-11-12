@@ -10,7 +10,7 @@ module unload mvapich2
 module unload gmvapich2
 module load mvapich2gdr_gnu/2.2_cuda_8.0
 module load gcc/5.4.0-2.26
-module load /users/jenkins/easybuild/kesch/modules/all/cmake/3.12.0
+module load /users/mlukas/easybuild/kesch/modules/all/cmake/3.12.4
 module load netcdf-fortran/4.4.4-gmvolf-17.02
 module load hdf5/1.8.18-gmvolf-17.02
 
