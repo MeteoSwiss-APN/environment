@@ -7,7 +7,7 @@ module use /apps/escha/UES/RH7.3_PE17.02/sandbox-hdf5-17.06-2/modules/all
 module load netCDF-Fortran/4.4.4-CrayCCE-17.06
 module switch mvapich2_cce/2.2rc1.0.3_cuda80 mvapich2gdr_gnu/2.2_cuda_8.0
 module load gcc/5.4.0-2.26
-module load /users/jenkins/easybuild/kesch/modules/all/cmake/3.12.0
+module load /users/mlukas/easybuild/kesch/modules/all/cmake/3.12.4
 
 export LD_LIBRARY_PATH=${CRAY_LD_LIBRARY_PATH}:${LD_LIBRARY_PATH}
 
