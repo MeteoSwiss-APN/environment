@@ -22,3 +22,7 @@ export CC=cc
 export FC=ftn
 # We cannot simply use g++ as cuda host compiler, because we require MPI support
 export CUDAHOSTCXX=CC
+
+export MPICH_RDMA_ENABLED_CUDA=1
+export MPICH_G2G_PIPELINE=64
+
