@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 module purge
 module load craype-haswell
-module load GCC/4.9.3-binutils-2.25
-module load PrgEnv-pgi/16.7
-module load CMake/3.8.1
+module load PrgEnv-pgi/18.4
+module load cmake/3.9.1 
+module load gcc/5.4.0-2.26 
 
 # Add an explicit linker line for GCC 4.9.3 library to provide C++11 support
-export LDFLAGS="-L$EBROOTGCC/lib64 ${LDFLAGS}"
+#export LDFLAGS="-L$EBROOTGCC/lib64 ${LDFLAGS}"
 
 export LD_LIBRARY_PATH=${CRAY_LD_LIBRARY_PATH}:${LD_LIBRARY_PATH}
 
