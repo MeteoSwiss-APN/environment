@@ -17,5 +17,5 @@ export LD_LIBRARY_PATH=${BOOST_ROOT}/lib:${LD_LIBRARY_PATH}
 # We have gcc for gnu, cray and pgi environments
 export CXX=`which g++`
 export CC=`which gcc`
-export FC=`which mpif90`
+export FC=`which pgf90`
 export LINKER_X86_64=$(which ld)
